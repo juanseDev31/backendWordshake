@@ -36,6 +36,9 @@ def graphql_server():
         "data": result.data,
         "errors": [str(e) for e in result.errors] if result.errors else None
     })
+@app.route('/')
+def home():
+    return "La app está corriendo"
 
 if __name__ == '__main__':
     
